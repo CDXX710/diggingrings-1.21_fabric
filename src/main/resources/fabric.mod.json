@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "diggingring",
+  "version": "${version}",
+  "name": "DiggingRing",
+  "description": "Rings which provides Haste when held in left hand.",
+  "authors": [
+    "CDXX"
+  ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/diggingring/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cdxx.diggingring._main"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "KineticYeet"
+  }
+}
