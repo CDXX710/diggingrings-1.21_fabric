@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "diggingring",
+  "id": "diggingrings",
   "version": "${version}",
-  "name": "DiggingRing",
+  "name": "DiggingRings",
   "description": "Rings which provides Haste when held in left hand.",
   "authors": [
     "CDXX"
   ],
   "contact": {},
-  "license": "All-Rights-Reserved",
-  "icon": "assets/diggingring/icon.png",
+  "license": "CC0-1.0",
+  "icon": "assets/diggingrings/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "cdxx.diggingring._main"
+      "cdxx.diggingrings.DiggingRings"
     ]
   },
   "depends": {
@@ -23,6 +23,6 @@
     "fabric-api": "*"
   },
   "suggests": {
-    "another-mod": "KineticYeet"
+    "another-mod": "https://modrinth.com/user/CDXX"
   }
 }
