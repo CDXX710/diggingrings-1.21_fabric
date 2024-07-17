@@ -1,31 +1,28 @@
 {
-	"schemaVersion": 1,
-	"id": "diggingrings",
-	"version": "${version}",
-	"name": "DiggingRings",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/diggingrings/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"cdxx.diggingrings.DiggingRings"
-		]
-	},
-	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "diggingrings",
+  "version": "${version}",
+  "name": "DiggingRings",
+  "description": "Rings which provides Haste when held in left hand.",
+  "authors": [
+    "CDXX"
+  ],
+  "contact": {},
+  "license": "CC0-1.0",
+  "icon": "assets/diggingrings/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cdxx.diggingrings.DiggingRings"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "https://modrinth.com/user/CDXX"
+  }
 }
