@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "#N#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "diggingrings:haste1ring"
+    },
+    "N": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "id": "diggingrings:haste2ring",
+    "count": 1
+  },
+  "group": "rings"
+}

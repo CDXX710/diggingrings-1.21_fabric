@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "has_item1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "diggingrings:haste1ring"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_item1"]
+  ],
+  "rewards": {
+    "recipes": [
+      "diggingrings:haste2ring"
+    ]
+  }
+}

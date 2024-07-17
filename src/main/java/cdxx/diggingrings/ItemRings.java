@@ -1,39 +1,37 @@
 package cdxx.diggingrings;
 
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+
+import java.util.List;
 
 public class ItemRings {
 
-    public static final Item HASTE1RING;
-    public static final Item HASTE2RING;
-
-    static {
-        HASTE1RING = registerItem("haste1ring", new Item(new Item.Properties()));
-        HASTE2RING = registerItem("haste2ring", new Item(new Item.Properties()));
-    }
-
-    public static Item registerItem(String string, Item item) {
-        return registerItem(ResourceLocation.withDefaultNamespace(string), item);
-    }
-
-    public static Item registerItem(ResourceLocation resourceLocation, Item item) {
-        return registerItem(ResourceKey.create(BuiltInRegistries.ITEM.key(), resourceLocation), item);
-    }
-
-    public static Item registerItem(ResourceKey<Item> resourceKey, Item item) {
-        if (item instanceof BlockItem) {
-            ((BlockItem) item).registerBlocks(Item.BY_BLOCK, item);
-        }
-
-        return Registry.register(BuiltInRegistries.ITEM, resourceKey, item);
-    }
+    public static Item HASTE1RING;
+    public static Item HASTE2RING;
 
     public static void load() {
+        HASTE1RING = DiggingRings.register(new CustomItem(new Item.Settings(), "item.diggingrings.hasterings.tooltip", "item.diggingrings.haste1ring.tooltip"), "haste1ring");
+        HASTE2RING = DiggingRings.register(new CustomItem(new Item.Settings(), "item.diggingrings.hasterings.tooltip", "item.diggingrings.haste2ring.tooltip"), "haste2ring");
+    }
+
+    public static class CustomItem extends Item {
+        private final String tooltipText1;
+        private final String tooltipText2;
+
+        public CustomItem(Settings settings, String tooltipText1, String tooltipText2) {
+            super(settings);
+            this.tooltipText1 = tooltipText1;
+            this.tooltipText2 = tooltipText2;
+        }
+
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable(this.tooltipText1).formatted(Formatting.BLUE));
+            tooltip.add(Text.translatable(this.tooltipText2).formatted(Formatting.GOLD));
+        }
     }
 }
-

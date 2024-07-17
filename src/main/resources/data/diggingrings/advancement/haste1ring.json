@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:netherite_upgrade_smithing_template"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["has_item"]
+  ],
+  "rewards": {
+    "recipes": [
+      "diggingrings:haste1ring"
+    ]
+  }
+}
